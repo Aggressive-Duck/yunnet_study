@@ -1,7 +1,9 @@
 import UserForm from "@/components/UserForm";
 
 export default async function Home() {
-  const response = await fetch('http://localhost:3000/users', {
+  const apiHost = process.env.API_HOST;
+
+  const response = await fetch(`${apiHost}/users`, {
     method: 'GET',
     cache: 'no-store', 
   });

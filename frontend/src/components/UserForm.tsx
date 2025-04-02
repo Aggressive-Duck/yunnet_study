@@ -9,7 +9,7 @@ export default function UserForm() {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const response = await fetch("http://localhost:3000/users", {
+    const response = await fetch("api/users", {
       method: "POST",
       cache: "no-store",
       headers: {
